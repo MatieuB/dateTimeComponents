@@ -37,7 +37,7 @@ $scope.vm.onStop = function () {
 };
 $scope.vm.time = ''
 $('#timepicker').pickatime({
-  autoclose: false,
+  autoclose: true,
   twelvehour: false,
   afterDone: function(element,time) {
       console.log('after done fired');
@@ -48,5 +48,22 @@ $('#timepicker').pickatime({
   }
 
 });
-
+$scope.toUTC = function(date,time,zone){
+  console.log($scope.vm.date);
+  console.log($scope.vm.time);
+  //"1994-11-05T13:15:30Z"
+  var d = $scope.vm.date
+  var t = $scope.vm.time
+  var dateEls = d.split('/');
+  var year = dateEls[2]
+  var month = dateEls[1]
+  var day = dateEls[0]
+  var timeEls = t.split(':')
+  var hour = timeEls[0]
+  var min = timeEls[1]
+  console.log(dateEls);
+  $scope.vm.utc = `${year}-${month}-${day}T${hour}:${min}:00Z`
+  console.log($scope.vm.utc);
+  // $scope.$apply()
+}
 })

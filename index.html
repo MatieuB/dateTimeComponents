@@ -4,11 +4,16 @@
   <meta charset="UTF-8">
   <title>Document</title>
 
-
+<style>
+.input-field{
+  width:400px !important;
+}
+</style>
 </head>
 <body ng-controller="MainCtrl">
+<h1>date/time picker sandbox</h1>
 
-
+  <div class="input-field">
 <label for="inputCreated">Input date</label>
 <input ng-model="vm.date" input-date
     type="text"
@@ -36,17 +41,43 @@
     on-close="onClose()"
     on-set="onSet()"
     on-stop="onStop()" />
+
+    </div>
 date: {{vm.date}}
 
     <!-- <label for="input_starttime">Time</label>
     <input id="input_starttime" input-clock data-twelvehour="false" type="text"> -->
+<div class="input-field">
 
     <div ng-model="vm.time"class="input-field col s12">
         <label for="timepicker">Time</label>
         <input id="timepicker" data-default="14:20:00" class="timepicker" type="time">
     </div>
+  </div>
 time: {{vm.time}}
+<hr>
+<button ng-click="toUTC()">get utc</button>
+<br>
+utc:{{vm.utc}}
+<!-- <hr>
+<input type="datetime-local"
+       ng-model="dt"
+       [name="string"]
+       [min="string"]
+       [max="string"]
+       [ng-min=""]
+       [ng-max=""]
+       [required="string"]
+       [ng-required="string"]
+       [ng-change="string"]>
+{{dt}}
+<input type="datetime-local" id="exampleInput" name="input" ng-model="example"
+      placeholder="yyyy-MM-ddTHH:mm:ss" min="2001-01-01T00:00:00" max="2013-12-31T00:00:00" required />
+{{example}}
 
+
+<input type="month" ng-model="month">
+{{month}} -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
 
 
