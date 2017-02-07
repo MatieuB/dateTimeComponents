@@ -1,2 +1,2 @@
-### visit link
-[datetime-sandbox](http://www.datetime-sandbox.surge.sh)
+### viewing:
+`$ python -m SimpleHTTPServer 8000`
