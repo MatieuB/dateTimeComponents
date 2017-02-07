@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html ng-app="test">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+
+
+</head>
+<body ng-controller="MainCtrl">
+
+
+<label for="inputCreated">Input date</label>
+<input ng-model="vm.date" input-date
+    type="text"
+    name="created"
+    id="inputCreated"
+    ng-model="currentTime"
+    container=""
+    format="dd/mm/yyyy"
+    months-full="{{ month }}"
+    months-short="{{ monthShort }}"
+    weekdays-full="{{ weekdaysFull }}"
+    weekdays-short="{{ weekdaysShort }}"
+    weekdays-letter="{{ weekdaysLetter }}"
+    disable="disable"
+    min="{{ minDate }}"
+    max="{{ maxDate }}"
+    today="today"
+    first-day="1"
+    clear="clear"
+    close="close"
+    select-years="15"
+    on-start="onStart()"
+    on-render="onRender()"
+    on-open="onOpen()"
+    on-close="onClose()"
+    on-set="onSet()"
+    on-stop="onStop()" />
+date: {{vm.date}}
+
+    <!-- <label for="input_starttime">Time</label>
+    <input id="input_starttime" input-clock data-twelvehour="false" type="text"> -->
+
+    <div ng-model="vm.time"class="input-field col s12">
+        <label for="timepicker">Time</label>
+        <input id="timepicker" data-default="14:20:00" class="timepicker" type="time">
+    </div>
+time: {{vm.time}}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.2/angular-materialize.min.js"></script>
+    <script src="./bower_components/materialize-clockpicker/dist/js/materialize.clockpicker.js"></script>
+    <link rel="stylesheet" href="./bower_components/materialize-clockpicker/dist/css/materialize.clockpicker.css">
+
+
+<script src="./app.js"></script>
+
+
+</body>
+</html>

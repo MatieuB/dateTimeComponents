@@ -1,0 +1,20 @@
+{
+  "name": "ngMaterial",
+  "authors": [
+    "Matthew Bouchard <bouchard.matthewj@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "materialize-clockpicker": "^0.1.1"
+  }
+}
