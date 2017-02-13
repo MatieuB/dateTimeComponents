@@ -25,6 +25,7 @@
 <body ng-controller="MainCtrl">
 <h1>date/time picker sandbox</h1>
 
+
   <div class="input-field">
 <label for="inputCreated">Input date</label>
 <input ng-model="vm.date" input-date
@@ -68,28 +69,15 @@ date: {{vm.date}}
   </div>
 time: {{vm.time}}
 <hr>
+<input id="date" type="date">
+<button ng-click="alert('shutp')">check it</button>
+{{vm.dt}}
+<hr>
+<button ng-click=validateDate()>validate date</button>
 <button ng-click="toUTC()">get utc</button>
 <br>
 utc:{{vm.utc}}
-<!-- <hr>
-<input type="datetime-local"
-       ng-model="dt"
-       [name="string"]
-       [min="string"]
-       [max="string"]
-       [ng-min=""]
-       [ng-max=""]
-       [required="string"]
-       [ng-required="string"]
-       [ng-change="string"]>
-{{dt}}
-<input type="datetime-local" id="exampleInput" name="input" ng-model="example"
-      placeholder="yyyy-MM-ddTHH:mm:ss" min="2001-01-01T00:00:00" max="2013-12-31T00:00:00" required />
-{{example}}
 
-
-<input type="month" ng-model="month">
-{{month}} -->
 
 
 

@@ -1,9 +1,18 @@
 angular.module('test',['ui.materialize'])
 
-.controller('MainCtrl',function ($scope) {
-
-  $scope.test = 'testing...'
+.controller('MainCtrl',function ($scope,$log) {
   $scope.vm = {}
+  $scope.alert= function(word){
+    console.log('the word is ', word);
+    alert('fuck')
+  }
+  $scope.vm.matthew = function() {
+    alert('fuck')
+    $log.info('----');
+    $log.info('dt',dt.value);
+    $log.info('type',typeof dt.value);
+  }
+console.log('type',typeof $scope.vm.dt);
   var currentTime = new Date();
 $scope.vm.currentTime = currentTime;
 $scope.vm.month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -66,4 +75,13 @@ $scope.toUTC = function(date,time,zone){
   console.log($scope.vm.utc);
   // $scope.$apply()
 }
+$scope.validateDate = function () {
+  $scope.dateString = document.getElementById('date').value;
+  console.log("date:",$scope.dateString);
+  var regEx = /^\d{4}-\d{2}-\d{2}$/;
+  $scope.dateString.match(regEx)? console.log('match'):console.log('not a match');
+  return $scope.dateString.match(regEx) != null;
+}
+
+
 })
