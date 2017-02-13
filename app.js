@@ -82,6 +82,12 @@ $scope.validateDate = function () {
   $scope.dateString.match(regEx)? console.log('match'):console.log('not a match');
   return $scope.dateString.match(regEx) != null;
 }
-
+$scope.validateTime = function(){
+  $scope.timeString = document.getElementById('time').value;
+  console.log("time:",$scope.timeString);
+  let regEx = /([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/
+  $scope.timeString.match(regEx)? console.log('match'):console.log('not a match');
+  return $scope.timeString.match(regEx) != null;
+}
 
 })
